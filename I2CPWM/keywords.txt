@@ -1,0 +1,5 @@
+I2CPWM	KEYWORD1
+attach	KEYWORD2
+write	KEYWORD2
+getTarget	KEYWORD2
+
