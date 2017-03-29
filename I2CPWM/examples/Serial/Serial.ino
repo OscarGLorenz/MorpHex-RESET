@@ -32,6 +32,7 @@ void setup() {
   for (int i = 0; i < 16; i++) {
     placaServos.attach(i); //Si omito parametros por defecto serán (0-180º) y false para la dirección
     placaServos.write(i, 90); //Movemos a 90º cada servo
+    delay(5);
   }
 }
 
