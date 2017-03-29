@@ -45,8 +45,8 @@ public:
 	 //Crea un objeto I2CPWM, dar la dirección, depende de los jumpers cortados
 	I2CPWM(uint8_t address = 0x40);
 
-  //Esta función debe llamarse en el setup
-  void init();
+  	//Esta función debe llamarse en el setup
+  	void init();
 
 	//Conecta un servo, especifica el canal. Opcionalmente pon un máximo y un mínimo (0-180).
 	//Opcionalmente especifica si los ángulos deben ser en sentido opuesto
