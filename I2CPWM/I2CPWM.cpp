@@ -3,17 +3,11 @@
  *
  *  Created on: 10 dic. 2016
  *      Author: oscar
+ *  Changes v0.1: 29 mar. 2017
  */
 
 #include "I2CPWM.h"
 #include <Wire.h>
-
-/*
- * I2CPWM.h
- *
- *  Created on: 10 dic. 2016
- *      Author: oscar
- */
 
 I2CPWM::I2CPWM(uint8_t address) {
 	_address = address;
@@ -21,12 +15,14 @@ I2CPWM::I2CPWM(uint8_t address) {
 	mins = new uint16_t[NUMBER_OF_SERVOS];
 	maxs = new uint16_t[NUMBER_OF_SERVOS];
 	reverse = new bool[NUMBER_OF_SERVOS];
+}
 
-	Wire.begin();
-	reset();
+void I2CPWM::init() {
+  Wire.begin();
+  reset();
 
-	setPWMFreq(60);
-	yield();
+  setPWMFreq(60);
+  yield();
 }
 
 void I2CPWM::attach(uint8_t servo, uint16_t minimum, uint16_t maximum,
