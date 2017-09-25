@@ -24,7 +24,9 @@ I2CPWM placaServos(0x40);
 
 void setup() {
   Serial.begin(9600);
-
+  //Espera 10ms en vez de los 1000ms tras enviar un comando por serial
+  Serial.setTimeout(10);
+   
   //Hay que llamar en el setup a esta función
   placaServos.init();
 
